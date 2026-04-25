@@ -31,6 +31,7 @@ import java.util.List;
 
 import PageObjectModel.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 public class BaseTest {
 	public WebDriver driver;
@@ -84,6 +85,7 @@ public class BaseTest {
 	}
 	@BeforeMethod(alwaysRun=true)
 	public LandingPage launchTheApp() throws IOException {
+		System.out.println("This is a test if i can modify a project\n During the project is in webhook cicd automation Test");
 		initiliseDriver();
 		
 		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
